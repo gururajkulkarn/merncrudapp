@@ -15,7 +15,7 @@ const navigate = useNavigate()
 
 const handlesubmit = (e) => {
   e.preventDefault()
-  axios.post('https://merncrudapp-nu.vercel.app/login',text)
+  axios.post('http://localhost:3001/login',text)
   .then(response => {
     console.log(response)
     if(response.data === "Success"){

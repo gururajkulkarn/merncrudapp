@@ -14,7 +14,7 @@ const SignUp = () => {
 
 const handlesubmit = (e) => {
   e.preventDefault()
-  axios.post('https://merncrudapp-nu.vercel.app/createRegister',text)
+  axios.post('http://localhost:3001/createRegister',text)
   .then(response => {
     console.log(text)
     toast.success("Registered successfully!")
