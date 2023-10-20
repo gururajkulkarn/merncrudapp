@@ -7,7 +7,8 @@ const Users = () => {
 const[data,setData] = useState([])
 
 useEffect(()=>{
-axios.get('http://localhost:3001/')
+
+axios.get('https://merncrudapp-nu.vercel.app/')
 .then((response) => {
   console.log(response.data)
   setData(response.data)
@@ -15,11 +16,12 @@ axios.get('http://localhost:3001/')
 .catch((error)=>{
   console.log(error)
 })
+
 },[])
 
 
 const handleDelete = (id) => {
-axios.delete('http://localhost:3001/deleteUser/'+ id)
+axios.delete('https://merncrudapp-nu.vercel.app/deleteUser/'+ id)
 .then(res => {console.log(res)
 window.location.reload()
 })

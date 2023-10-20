@@ -17,7 +17,7 @@ const navigate = useNavigate()
 
 const handlesubmit = (e) =>{
 e.preventDefault()
-axios.post('http://localhost:3001/createUser',text)
+axios.post('https://merncrudapp-nu.vercel.app/createUser',text)
 .then(response => {
   navigate('/home')
 }).catch(error => console.log(error))

@@ -17,7 +17,7 @@ const navigate = useNavigate()
 
 
 useEffect(()=>{
-  axios.get('http://localhost:3001/getUser/' + id)
+  axios.get('https://merncrudapp-nu.vercel.app/getUser/' + id)
   .then((response) => {
     console.log(response)
     setText(response.data)
@@ -31,7 +31,7 @@ useEffect(()=>{
 
 const handlesubmit = (e) => {
   e.preventDefault()
-  axios.put('http://localhost:3001/updateUser/'+id,text)
+  axios.put('https://merncrudapp-nu.vercel.app/updateUser/'+id,text)
   .then(result => {
     console.log(result)
     alert("Data Updated successfully...")
