@@ -6,6 +6,8 @@ import UpdateUser from './UpdateUser'
 import SignUp from './SignUp'
 import Login from './Login'
 import Home from './Website/Home'
+import About from './Website/About'
+import Recruitment from './Website/Recruitment'
 
 
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
       <BrowserRouter>
       <Routes>
       <Route path="/website" element={<Home/>}></Route>
+      <Route path="/recruitment" element={<Recruitment/>}></Route>
       <Route path="/" element={<Login/>}></Route>
       <Route path="/register" element={<SignUp/>}></Route>
       <Route path="/home" element={<Users/>}></Route>

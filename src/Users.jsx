@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-
 const Users = () => {
+
 const[data,setData] = useState([])
 
 useEffect(()=>{
@@ -31,9 +31,9 @@ window.location.reload()
     <>
 <div style={{marginRight:"20px"}}>
   <Link to="/" > <button className='btn btn-primary'>Logout</button> </Link>
-</div>
+</div><br/><br/>
 <div style={{marginRight:"20px"}}>
-  <Link to="/website" > <button className='btn btn-primary'>Website</button> </Link>
+  <Link to="/website" > <button className='btn btn-success'>Website</button> </Link>
 </div>
 
       <div className='container mt-5'>
@@ -41,18 +41,27 @@ window.location.reload()
 <table className='table'>
     <thead>
         <tr>
-            <th>Name</th>
+            <th>FormListName</th>
+            <th>LastName</th>
+            <th>Mobile</th>
             <th>Email</th>
-            <th>Age</th>
-            <th>Action</th>
+            <th>Date of Birth</th>
+            <th>Qualification</th>
+            <th>State</th>
+            <th>City</th>
         </tr>
     </thead>
     <tbody>
        {data.map((user,index)=>{
        return  <tr key={index}>
-            <td>{user.name}</td>
+            <td>{user.fname}</td>
+            <td>{user.lname}</td>
+            <td>{user.mobile}</td>
             <td>{user.email}</td>
-            <td>{user.age}</td>
+            <td>{user.dob}</td>
+            <td>{user.education}</td>
+            <td>{user.state}</td>
+            <td>{user.city}</td>
             <td>
             <Link to={`/update/${user._id}`} > <button className='btn btn-warning m-2'>Edit</button></Link>  
             
