@@ -32,7 +32,9 @@ window.location.reload()
 <div style={{marginRight:"20px"}}>
   <Link to="/" > <button className='btn btn-primary'>Logout</button> </Link>
 </div>
-
+<div style={{marginRight:"20px"}}>
+  <Link to="/website" > <button className='btn btn-primary'>Website</button> </Link>
+</div>
 
       <div className='container mt-5'>
 <Link to="/create" className='btn btn-success'>Add+</Link>
